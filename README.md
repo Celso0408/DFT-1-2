@@ -2,5 +2,5 @@
 Quasiparticle Correction
 run the code: 
 ```python 
-  python dft_half.py'
+  python dft_half.py
 ```
