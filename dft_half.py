@@ -1,4 +1,3 @@
-from distutils import text_file
 import yaml, os, shutil
 from ase import Atoms
 
@@ -175,9 +174,11 @@ if __name__ == '__main__':
         wano_file = yaml.full_load(file)
 
     element = wano_file["Element"]
+    cut = wano_file["Cut"]
+    
     initial_dir = os.getcwd()
     extensions = [".ae", ".ae-05"]
-    cut = 2.0
+    
 
     [create_files(element, ext) for ext in extensions] 
 
