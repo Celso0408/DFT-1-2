@@ -19,6 +19,7 @@ All the input files for the system under study must be in the folder where you r
 2. program_m05: Program to POTCAR generation corrected by the DFT-1/2 approach.
 3. potpaw_PBE.54: Folder with all original POTCAR provided by VASP code (for legal reason we will keep only a few of them). 
 4. rendered_wano.yml: File with all the inputs we need to run the script. At this point, only the chemical species are required.
+```
 
 ## 3. Running the scripts and output files
 
