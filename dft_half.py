@@ -10,15 +10,10 @@ def copy_POTCAR(element):
     potcar_folder = "potpaw_PBE.54/"
     pot_dir = element + "_potcar"
 
-    # if os.path.exists(pot_dir + '/' + "POSCAR"):
-    #     print("Creating") 
-    #     os.remove(pot_dir + '/' + "POSCAR")
-    # else:
-    
-    shutil.copy2(potcar_folder + element + "_GW/POTCAR" , pot_dir)
+    if os.path.exists(element + "_potcar/POTCAR"):
+        os.remove(element + "_potcar/POTCAR")
 
-    
-    #shutil.copy2("POTCAR" , pot_dir)
+    shutil.copy2(potcar_folder + element + "_GW/POTCAR" , pot_dir)
     
 
 def search_string_in_file(file_name, string_to_search):
@@ -60,7 +55,7 @@ def create_IN(cut, element):
     with open(pot_dir + "VTOTAL1.ae", "r+") as f_file:
         txt_file = f_file.readlines()
 
-    lp = search_string_in_file(pot_dir + "/POTCAR", "local part")[0][0]
+    lp = search_string_in_file(pot_dir + "POTCAR", "local part")[0][0]
     n_down = search_string_in_file(pot_dir + "/" + "VTOTAL1.ae", "Down potential follows")[0][0]
     m_up = search_string_in_file(pot_dir + "/" + "VTOTAL1.ae", "Up potential follows")[0][0]
 
@@ -190,6 +185,3 @@ if __name__ == '__main__':
     os.chdir(element + "_potcar")
     os.system("./../program_m05/add2POTCARF "+ str(cut) +" 1.0")
     os.chdir(initial_dir)
-    
-        
-        
