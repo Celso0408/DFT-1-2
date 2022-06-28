@@ -1,6 +1,6 @@
 # DFT-1-2
 
-This python script generates the corrected POTCAR for Quasiparticle Correction by applying the DFT-1/2 approach.
+This python script generates the corrected POTCAR for Quasiparticle Correction by applying the DFT-1/2 approach_ES.
 
 ## 1. Python Setup
 
